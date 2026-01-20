@@ -1,0 +1,7 @@
+{
+  "name": "NexusResell Admin Suite",
+  "description": "A comprehensive license management, transaction history, and exam proctoring dashboard with support for reseller networks and secure file management.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
