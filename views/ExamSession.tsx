@@ -79,12 +79,12 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
               </div>
             </div>
 
-            {/* End Session Button - Compact resolution */}
+            {/* End Session Button - Compact resolution, removed hover transition on icon */}
             <button 
               onClick={onEnd} 
               className="w-full h-9 bg-primary hover:bg-primary-hover text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group"
             >
-              <span className="material-symbols-outlined text-[18px] group-hover:rotate-12 transition-transform">power_settings_new</span>
+              <span className="material-symbols-outlined text-[18px]">power_settings_new</span>
               <span className="text-xs tracking-tight">End Session</span>
             </button>
           </div>
