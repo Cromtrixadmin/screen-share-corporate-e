@@ -243,7 +243,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
           <div className="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start">
             <span className="text-xs text-text-secondary dark:text-text-secondary-dark font-semibold whitespace-nowrap">Rows Per Page:</span>
             <div className="relative">
-              <select className="appearance-none bg-white dark:bg-background-dark text-text-main dark:text-white text-xs rounded border border-border-light dark:border-border-dark focus:outline-none cursor-pointer py-1.5 pl-3 pr-8 w-16 text-center shadow-sm">
+              <select className="appearance-none bg-white dark:bg-background-dark text-text-main dark:text-white text-xs rounded-lg border border-border-light dark:border-border-dark focus:outline-none cursor-pointer py-1.5 pl-3 pr-8 w-16 text-center shadow-sm">
                 <option>10</option>
                 <option selected>25</option>
                 <option>50</option>
@@ -256,8 +256,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
             <p className="text-xs text-text-secondary dark:text-text-secondary-dark text-center font-medium">Showing 3 Of 128</p>
           </div>
           <div className="flex gap-2 w-full sm:w-auto justify-center sm:justify-end">
-            <button className="px-3 py-1.5 text-xs font-bold text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white bg-white dark:bg-background-dark rounded border border-border-light dark:border-border-dark hover:border-gray-400 transition-all shadow-sm">Previous</button>
-            <button className="px-3 py-1.5 text-xs font-bold text-text-main dark:text-white bg-white dark:bg-surface-dark rounded border border-border-light dark:border-border-dark hover:border-primary hover:text-primary transition-all shadow-sm">Next</button>
+            <button className="px-3 py-1.5 text-xs font-bold text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white bg-white dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:border-gray-400 transition-all shadow-sm">Previous</button>
+            <button className="px-3 py-1.5 text-xs font-bold text-text-main dark:text-white bg-white dark:bg-surface-dark rounded-lg border border-border-light dark:border-border-dark hover:border-primary hover:text-primary transition-all shadow-sm">Next</button>
           </div>
         </div>
       </section>
@@ -331,7 +331,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
           <div className="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start">
             <span className="text-xs text-text-secondary dark:text-text-secondary-dark font-semibold whitespace-nowrap">Rows Per Page:</span>
             <div className="relative">
-              <select className="appearance-none bg-white dark:bg-background-dark text-text-main dark:text-white text-xs rounded border border-border-light dark:border-border-dark focus:outline-none cursor-pointer py-1.5 pl-3 pr-8 w-16 text-center shadow-sm">
+              <select className="appearance-none bg-white dark:bg-background-dark text-text-main dark:text-white text-xs rounded-lg border border-border-light dark:border-border-dark focus:outline-none cursor-pointer py-1.5 pl-3 pr-8 w-16 text-center shadow-sm">
                 <option>10</option>
                 <option selected>25</option>
                 <option>50</option>
@@ -344,8 +344,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
             <p className="text-xs text-text-secondary dark:text-text-secondary-dark text-center font-medium">Showing 3 Of 128</p>
           </div>
           <div className="flex gap-2 w-full sm:w-auto justify-center sm:justify-end">
-            <button className="px-3 py-1.5 text-xs font-bold text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white bg-white dark:bg-background-dark rounded border border-border-light dark:border-border-dark hover:border-gray-400 transition-all shadow-sm">Previous</button>
-            <button className="px-3 py-1.5 text-xs font-bold text-text-main dark:text-white bg-white dark:bg-surface-dark rounded border border-border-light dark:border-border-dark hover:border-primary hover:text-primary transition-all shadow-sm">Next</button>
+            <button className="px-3 py-1.5 text-xs font-bold text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white bg-white dark:bg-background-dark rounded-lg border border-border-light dark:border-border-dark hover:border-gray-400 transition-all shadow-sm">Previous</button>
+            <button className="px-3 py-1.5 text-xs font-bold text-text-main dark:text-white bg-white dark:bg-surface-dark rounded-lg border border-border-light dark:border-border-dark hover:border-primary hover:text-primary transition-all shadow-sm">Next</button>
           </div>
         </div>
       </section>
