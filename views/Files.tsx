@@ -212,7 +212,7 @@ const Files: React.FC = () => {
             </div>
             
             {viewMode === 'list' && (
-              <div className="px-6 py-3 border-t border-slate-100 dark:border-border-dark flex justify-between items-center bg-slate-50 dark:bg-surface-darker text-left">
+              <div className="px-6 py-3 border-t border-slate-100 dark:border-border-dark flex justify-between items-center bg-slate-50 dark:bg-surface-darker text-left dark:hidden">
                 <span className="text-xs text-slate-500 dark:text-text-secondary font-medium">Total Storage: <span className="text-slate-900 dark:text-white">66.6 MB</span></span>
                 <span className="text-xs text-slate-400 dark:text-text-secondary">Showing {files.length} of {files.length} files</span>
               </div>
