@@ -113,14 +113,14 @@ const Files: React.FC = () => {
               <div className="flex items-center bg-slate-100 dark:bg-surface-darker rounded-lg border border-slate-200 dark:border-border-dark p-1 h-11">
                 <button 
                   onClick={() => setViewMode('grid')}
-                  className={`flex items-center justify-center w-9 h-full rounded transition-all shadow-none border-none ${viewMode === 'grid' ? 'bg-white dark:bg-surface-dark text-primary dark:text-white' : 'text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white hover:bg-white dark:hover:bg-surface-dark'}`}
+                  className={`flex items-center justify-center w-9 h-full rounded transition-all shadow-none border-none ${viewMode === 'grid' ? 'bg-transparent dark:bg-surface-dark text-primary dark:text-white' : 'text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white dark:hover:bg-surface-dark'}`}
                   title="Grid View"
                 >
                   <span className="material-symbols-outlined text-[20px]">grid_view</span>
                 </button>
                 <button 
                   onClick={() => setViewMode('list')}
-                  className={`flex items-center justify-center w-9 h-full rounded transition-all shadow-none border-none ${viewMode === 'list' ? 'bg-white dark:bg-surface-dark text-primary dark:text-white' : 'text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white hover:bg-white dark:hover:bg-surface-dark'}`}
+                  className={`flex items-center justify-center w-9 h-full rounded transition-all shadow-none border-none ${viewMode === 'list' ? 'bg-transparent dark:bg-surface-dark text-primary dark:text-white' : 'text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white dark:hover:bg-surface-dark'}`}
                   title="List View"
                 >
                   <span className="material-symbols-outlined text-[20px]">view_list</span>
@@ -172,7 +172,7 @@ const Files: React.FC = () => {
                         <div className="col-span-3 md:col-span-2 text-slate-500 dark:text-text-secondary text-sm font-mono">{file.size}</div>
                         <div className="col-span-3 hidden md:block text-slate-400 dark:text-text-secondary text-sm">{file.date}</div>
                         <div className="col-span-4 md:col-span-1 flex justify-end">
-                          <button className="size-9 flex items-center justify-center rounded-lg text-slate-400 dark:text-text-secondary hover:text-red-400 hover:bg-red-400/10 transition-colors">
+                          <button className="size-9 flex items-center justify-center rounded-lg text-slate-400 dark:text-text-secondary hover:text-red-600 dark:hover:text-red-500 hover:bg-red-500/15 dark:hover:bg-red-500/20 transition-all">
                             <span className="material-symbols-outlined text-[20px]">delete</span>
                           </button>
                         </div>
@@ -200,7 +200,7 @@ const Files: React.FC = () => {
                             <span className="material-symbols-outlined text-[16px]">download</span>
                             Download
                           </button>
-                          <button className="size-9 rounded bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark hover:bg-red-500/10 hover:border-red-500/30 hover:text-red-500 dark:hover:text-red-400 text-slate-400 dark:text-text-secondary flex items-center justify-center transition-all shadow-none">
+                          <button className="size-9 rounded bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark hover:bg-red-500/10 hover:border-red-500/40 hover:text-red-600 dark:hover:text-red-400 text-slate-400 dark:text-text-secondary flex items-center justify-center transition-all shadow-none">
                             <span className="material-symbols-outlined text-[18px]">delete</span>
                           </button>
                         </div>
@@ -261,7 +261,7 @@ const Files: React.FC = () => {
                   </div>
                   <p className="text-[10px] text-slate-400 dark:text-text-secondary mt-1">2.4 MB / 5.1 MB • 15s remaining</p>
                 </div>
-                <button className="size-8 flex items-center justify-center rounded-lg text-slate-400 dark:text-text-secondary hover:text-red-400 hover:bg-red-400/10 transition-colors" title="Cancel upload">
+                <button className="size-8 flex items-center justify-center rounded-lg text-slate-400 dark:text-text-secondary hover:text-red-600 dark:hover:text-red-500 hover:bg-red-500/15 dark:hover:bg-red-500/20 transition-colors" title="Cancel upload">
                   <span className="material-symbols-outlined text-[18px]">cancel</span>
                 </button>
               </div>
@@ -297,7 +297,7 @@ const Files: React.FC = () => {
                   </div>
                   <p className="text-[10px] text-slate-400 dark:text-text-secondary mt-1">1.2 MB • Waiting...</p>
                 </div>
-                <button className="size-8 flex items-center justify-center rounded-lg text-slate-400 dark:text-text-secondary hover:text-red-400 hover:bg-red-400/10 transition-colors" title="Cancel upload">
+                <button className="size-8 flex items-center justify-center rounded-lg text-slate-400 dark:text-text-secondary hover:text-red-600 dark:hover:text-red-500 hover:bg-red-500/15 dark:hover:bg-red-500/20 transition-colors" title="Cancel upload">
                   <span className="material-symbols-outlined text-[18px]">cancel</span>
                 </button>
               </div>
