@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ThemeToggle from '../components/ThemeToggle';
 
@@ -16,8 +15,8 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
   toggleDarkMode 
 }) => {
   return (
-    <div className="h-full w-full flex flex-col overflow-hidden">
-      <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#2b3436] px-6 py-4 bg-white dark:bg-surface-home-dark/95 z-10 shrink-0">
+    <div className="h-full w-full flex flex-col overflow-hidden text-left">
+      <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#2b3436] px-6 py-4 bg-white dark:bg-surface-home-dark/95 z-10 shrink-0 transition-colors">
         <div className="flex items-center gap-4 text-slate-900 dark:text-white">
           <div className="size-8 flex items-center justify-center bg-primary-home rounded-lg shadow-[0_0_15px_rgba(26,81,91,0.5)]">
             <span className="material-symbols-outlined text-white text-[20px]">hub</span>
@@ -48,7 +47,7 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
         </div>
       </header>
 
-      <main className="flex-1 flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
+      <main className="flex-1 flex items-center justify-center p-4 md:p-8 relative overflow-hidden bg-background-light dark:bg-background-home-dark transition-colors duration-300">
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 opacity-20 dark:opacity-20">
           <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary-home rounded-full blur-[120px]"></div>
           <div className="absolute top-[40%] right-[10%] w-[30%] h-[30%] bg-slate-300 dark:bg-[#2b3436] rounded-full blur-[100px]"></div>
@@ -122,7 +121,7 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[18px]">search</span>
                   </div>
-                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-slate-900 dark:text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Partner ID" type="text" defaultValue="35464645645"/>
+                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-slate-900 dark:text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Partner ID" type="text" />
                 </div>
                 <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Passcode</label>
                 <div className="relative mb-8">

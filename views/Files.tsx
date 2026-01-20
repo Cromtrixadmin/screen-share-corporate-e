@@ -185,7 +185,7 @@ const Files: React.FC = () => {
                   {files.map(file => {
                     const style = getFileStyle(file.type);
                     return (
-                      <div key={file.id} className="bg-slate-50 dark:bg-surface-darker rounded-lg border border-slate-200 dark:border-border-dark p-4 flex flex-col gap-4 group hover:border-primary/50 transition-colors h-full">
+                      <div key={file.id} className="bg-slate-50 dark:bg-surface-darker rounded-lg border border-slate-200 dark:border-border-dark p-4 flex flex-col gap-4 group dark:hover:border-primary/50 transition-colors h-full">
                         <div className="flex items-start justify-between">
                           <div className={`size-10 rounded-lg ${style.bg} border ${style.border} flex items-center justify-center ${style.color} shadow-sm shrink-0`}>
                             <span className="material-symbols-outlined">{style.icon}</span>
