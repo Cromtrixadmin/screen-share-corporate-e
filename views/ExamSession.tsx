@@ -40,11 +40,6 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
                  </div>
               </div>
 
-              {/* Resolution Badge - Top Right */}
-              <div className="absolute top-6 right-8 bg-black/70 backdrop-blur px-3 py-1.5 rounded-lg text-[10px] font-bold text-white/80 border border-white/10 tracking-widest uppercase">
-                Remote • 1920 x 1080
-              </div>
-
               {/* Workspace Indicator Bottom Bar */}
               <div className="absolute bottom-0 w-full h-14 bg-black/40 backdrop-blur-md flex items-center justify-center gap-3 border-t border-white/5 shrink-0">
                 <div className="size-8 rounded bg-blue-500 shadow-lg shadow-blue-500/20"></div>
@@ -59,37 +54,38 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
         <aside className="w-full md:w-[320px] bg-white dark:bg-[#0B0C0E] border-l border-slate-200 dark:border-[#22252B] flex flex-col shadow-2xl z-30 shrink-0 transition-colors">
           
           {/* Sidebar Header & Stats */}
-          <div className="px-5 py-6 border-b border-slate-100 dark:border-[#22252B]">
+          <div className="px-5 py-5 border-b border-slate-100 dark:border-[#22252B]">
             <div className="flex items-center justify-between mb-1">
-              <h3 className="text-slate-900 dark:text-white text-lg font-bold tracking-tight">Session #882-192</h3>
+              <h3 className="text-slate-900 dark:text-white text-base font-bold tracking-tight">Session #882-192</h3>
               <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span className="text-emerald-600 dark:text-emerald-500 text-[9px] font-extrabold tracking-widest uppercase">Live</span>
+                <span className="text-emerald-600 dark:text-emerald-500 text-[8px] font-extrabold tracking-widest uppercase">Live</span>
               </div>
             </div>
-            <p className="text-slate-400 dark:text-slate-500 text-[11px] font-medium mb-6 tracking-tight">MacBook Pro (M2)</p>
+            <p className="text-slate-400 dark:text-slate-500 text-[10px] font-medium mb-4 tracking-tight">MacBook Pro (M2)</p>
             
-            <div className="grid grid-cols-2 gap-2 mb-6">
-              <div className="bg-slate-50 dark:bg-[#1A1C1E] rounded-xl p-3 border border-slate-200 dark:border-white/5 text-center shadow-sm">
-                <span className="text-slate-400 dark:text-slate-500 text-[9px] font-bold uppercase tracking-widest block mb-1">Duration</span>
-                <p className="text-slate-900 dark:text-white text-xl font-bold tabular-nums">00:14:23</p>
+            {/* Compact Stats Grid */}
+            <div className="grid grid-cols-2 gap-2 mb-4">
+              <div className="bg-slate-50 dark:bg-[#1A1C1E] rounded-lg p-2 border border-slate-200 dark:border-white/5 text-center shadow-sm">
+                <span className="text-slate-400 dark:text-slate-500 text-[8px] font-bold uppercase tracking-widest block mb-0.5">Duration</span>
+                <p className="text-slate-900 dark:text-white text-base font-bold tabular-nums">00:14:23</p>
               </div>
-              <div className="bg-slate-50 dark:bg-[#1A1C1E] rounded-xl p-3 border border-slate-200 dark:border-white/5 text-center shadow-sm">
-                <span className="text-slate-400 dark:text-slate-500 text-[9px] font-bold uppercase tracking-widest block mb-1">Latency</span>
-                <p className="text-emerald-600 dark:text-emerald-400 text-xl font-bold tabular-nums">24ms</p>
+              <div className="bg-slate-50 dark:bg-[#1A1C1E] rounded-lg p-2 border border-slate-200 dark:border-white/5 text-center shadow-sm">
+                <span className="text-slate-400 dark:text-slate-500 text-[8px] font-bold uppercase tracking-widest block mb-0.5">Latency</span>
+                <p className="text-emerald-600 dark:text-emerald-400 text-base font-bold tabular-nums">24ms</p>
               </div>
             </div>
 
-            {/* End Session Button */}
+            {/* End Session Button - Compact resolution */}
             <button 
               onClick={onEnd} 
-              className="w-full h-11 bg-primary hover:bg-primary-hover text-white font-bold rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2.5 group"
+              className="w-full h-9 bg-primary hover:bg-primary-hover text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group"
             >
-              <span className="material-symbols-outlined text-[20px] group-hover:rotate-12 transition-transform">power_settings_new</span>
-              <span className="text-sm tracking-tight">End Session</span>
+              <span className="material-symbols-outlined text-[18px] group-hover:rotate-12 transition-transform">power_settings_new</span>
+              <span className="text-xs tracking-tight">End Session</span>
             </button>
           </div>
 
@@ -97,19 +93,19 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
           <div className="flex px-1 border-b border-slate-100 dark:border-[#22252B] bg-slate-50/30 dark:bg-black/20">
             <button 
               onClick={() => setActiveTab('exam')} 
-              className={`flex-1 py-3 text-[12px] font-bold transition-all border-b-2 ${activeTab === 'exam' ? 'text-slate-900 dark:text-white border-primary' : 'text-slate-400 dark:text-slate-500 border-transparent hover:text-slate-600 dark:hover:text-slate-300'}`}
+              className={`flex-1 py-3 text-[11px] font-bold transition-all border-b-2 ${activeTab === 'exam' ? 'text-slate-900 dark:text-white border-primary' : 'text-slate-400 dark:text-slate-500 border-transparent hover:text-slate-600 dark:hover:text-slate-300'}`}
             >
               Exam
             </button>
             <button 
               onClick={() => setActiveTab('chat')} 
-              className={`flex-1 py-3 text-[12px] font-bold transition-all border-b-2 ${activeTab === 'chat' ? 'text-slate-900 dark:text-white border-primary' : 'text-slate-400 dark:text-slate-500 border-transparent hover:text-slate-600 dark:hover:text-slate-300'}`}
+              className={`flex-1 py-3 text-[11px] font-bold transition-all border-b-2 ${activeTab === 'chat' ? 'text-slate-900 dark:text-white border-primary' : 'text-slate-400 dark:text-slate-500 border-transparent hover:text-slate-600 dark:hover:text-slate-300'}`}
             >
               Chat
             </button>
           </div>
 
-          {/* Content Area - Changed to flex-col with h-full layout */}
+          {/* Content Area */}
           <div className="flex-1 overflow-y-auto custom-scrollbar flex flex-col min-h-0">
             {activeTab === 'exam' ? (
               <div className="flex-1 flex flex-col p-5 animate-in fade-in slide-in-from-right-4 duration-300">
@@ -135,18 +131,18 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
                   </div>
                 </div>
 
-                {/* Compact Action Buttons Section - Aligned to Bottom */}
-                <div className="space-y-2.5 pt-6 mt-auto animate-in slide-in-from-bottom-2 duration-300">
-                  <button className="w-full h-[44px] bg-[#008f5d] hover:bg-[#007a4f] text-white font-bold rounded-xl transition-all shadow-md shadow-emerald-500/10 flex items-center justify-center gap-2 group">
-                    <span className="material-symbols-outlined text-[20px]">person_search</span>
-                    <span className="text-sm tracking-tight">Agent Has Answer ($5.00)</span>
+                {/* Highly Compact Action Buttons Section - Aligned to Bottom */}
+                <div className="space-y-2 pt-6 mt-auto animate-in slide-in-from-bottom-2 duration-300">
+                  <button className="w-full h-9 bg-[#008f5d] hover:bg-[#007a4f] text-white font-bold rounded-lg transition-all shadow-md shadow-emerald-500/10 flex items-center justify-center gap-1.5 group">
+                    <span className="material-symbols-outlined text-[18px]">person_search</span>
+                    <span className="text-xs tracking-tight">Agent Has Answer ($5.00)</span>
                   </button>
 
-                  <button className="w-full h-[44px] bg-white dark:bg-[#151719] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white font-bold rounded-xl hover:bg-slate-50 dark:hover:bg-[#1a1c1e] transition-all text-sm shadow-sm">
+                  <button className="w-full h-9 bg-white dark:bg-[#151719] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white font-bold rounded-lg hover:bg-slate-50 dark:hover:bg-[#1a1c1e] transition-all text-xs shadow-sm">
                     Skip
                   </button>
 
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 italic text-center font-medium opacity-80 px-2 pt-1 leading-normal">
+                  <p className="text-[9px] text-slate-500 dark:text-slate-400 italic text-center font-medium opacity-70 px-2 pt-1 leading-normal">
                     Verified agents provide accurate answers within 60 seconds.
                   </p>
                 </div>
