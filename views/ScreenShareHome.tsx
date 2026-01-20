@@ -122,14 +122,14 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[18px]">search</span>
                   </div>
-                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Partner ID" type="text" defaultValue="35464645645"/>
+                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-slate-900 dark:text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Partner ID" type="text" defaultValue="35464645645"/>
                 </div>
                 <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Passcode</label>
                 <div className="relative mb-8">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[18px]">lock</span>
                   </div>
-                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Passcode" type="password"/>
+                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-slate-900 dark:text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Passcode" type="password"/>
                 </div>
                 <button 
                   onClick={onSelectRemote}
