@@ -1,5 +1,6 @@
 
 import React from 'react';
+import ThemeToggle from '../components/ThemeToggle';
 
 interface ScreenShareHomeProps {
   onSelectDashboard: () => void;
@@ -35,22 +36,11 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <button 
-            className="relative flex items-center h-[34px] w-[64px] rounded-full bg-slate-100 dark:bg-[#0a0f14] border border-slate-200 dark:border-[#2b3436] transition-all focus:outline-none overflow-hidden" 
-            onClick={toggleDarkMode}
-          >
-            <div className="flex justify-between items-center w-full px-2.5 z-0">
-              <span className="material-symbols-outlined text-[18px] text-[#8e999b] transition-colors">light_mode</span>
-              <span className="material-symbols-outlined text-[18px] text-[#8e999b] transition-colors">dark_mode</span>
-            </div>
-            <div className="theme-toggle-slider absolute right-1 w-[26px] h-[26px] bg-toggle-teal rounded-full shadow-md flex items-center justify-center z-10">
-              <span className="material-symbols-outlined text-[16px] text-white dark:hidden">light_mode</span>
-              <span className="material-symbols-outlined text-[16px] text-white hidden dark:block fill-icon">dark_mode</span>
-            </div>
-          </button>
+          <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          
           <button 
             onClick={onSelectDashboard}
-            className="bg-primary-home hover:bg-[#15424a] text-white font-bold px-6 py-2 rounded-lg shadow-lg shadow-primary-home/20 transition-all active:scale-[0.98] flex items-center gap-2 text-sm"
+            className="bg-primary-home hover:bg-[#15424a] text-white font-bold px-6 h-9 rounded-lg shadow-lg shadow-primary-home/20 transition-all active:scale-[0.98] flex items-center gap-2 text-sm"
           >
             <span className="material-symbols-outlined text-[18px]">login</span>
             <span>Login</span>
@@ -115,7 +105,7 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
             </div>
           </div>
 
-          {/* Right Panel: Remote Desk */}
+          {/* Remote Panel: Remote Desk */}
           <div className="flex-1 p-8 md:p-10 flex flex-col bg-slate-50 dark:bg-[#141a20]">
             <div className="mb-10">
               <h3 className="text-slate-900 dark:text-white text-2xl font-bold mb-2 flex items-center gap-2">
