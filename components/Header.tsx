@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { View } from '../types';
 import ThemeToggle from './ThemeToggle';
@@ -53,13 +52,13 @@ const Header: React.FC<HeaderProps> = ({ currentView, setCurrentView, darkMode, 
         
         <div className="h-8 w-px bg-border-light dark:bg-[#2D3A3F] hidden md:block"></div>
         
-        <div className="flex items-center gap-3 pl-2 group cursor-pointer relative" onClick={onLogout}>
-          <div className="text-right hidden sm:block">
-            <p className="text-sm font-bold text-text-main dark:text-white leading-none">Alex Morgan</p>
+        <div className="flex items-center gap-3 pl-2 group cursor-pointer relative max-w-[180px]" onClick={onLogout}>
+          <div className="text-right hidden sm:block overflow-hidden">
+            <p className="text-sm font-bold text-text-main dark:text-white leading-none truncate">Alex Morgan</p>
             <p className="text-xs text-primary font-medium mt-1">Master Reseller</p>
           </div>
           <div 
-            className="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-gray-50 dark:ring-surface-dark transition-transform hover:scale-105" 
+            className="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-gray-50 dark:ring-surface-dark transition-transform hover:scale-105 shrink-0" 
             style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5lrokREXhbtTOXmuM08wHIyYzJpa1k7Df659z8KWQoM09AaDuVGeoQtEuh3c4E4JF-hhJfEIHfCgxPj4nFIdQF7eO8GJW_Yt-mCBtTvuUubQ-hzp6jsJmf0FzogVur8ZAbMfjhIG4PvixKz7MbXFYhWOmfIa4600JaBCXKwGJ3CkWfBMYHy8N6Kg3lTRF_-nONAaQ6SBRw4b5IhxaV5ezwhrm_g-6Hu6nu4Nud2w7PURaGjAdBHN1Uj9AXd1OuHldLGxF1cEjOYk')` }}
           />
         </div>

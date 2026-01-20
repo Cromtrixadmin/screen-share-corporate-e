@@ -15,14 +15,14 @@
         theme: {
           extend: {
             colors: {
-              "primary": "#1a545b",
+              "primary": "#1a515b",
               "primary-home": "#1a515b",
               "primary-hover": "#144247",
               "background-light": "#f9fafa",
               "background-dark": "#101618",
               "background-home-dark": "#10171e",
               "surface-light": "#F9FAFB",
-              "surface-dark": "#1A2126",
+              "surface-dark": "#161b22",
               "surface-darker": "#151b1e",
               "surface-home-dark": "#161b22",
               "surface-card": "#1c242c",
@@ -100,6 +100,27 @@
       }
       .fill-icon {
           font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+
+      .scanning-circle {
+          position: relative;
+      }
+      .scanning-circle::after {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          right: -4px;
+          bottom: -4px;
+          border-radius: 50%;
+          border: 2px solid transparent;
+          border-top-color: #1a515b;
+          border-right-color: #1a515b;
+          animation: spin 2s linear infinite;
+      }
+      @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
       }
     </style>
     <script type="importmap">
