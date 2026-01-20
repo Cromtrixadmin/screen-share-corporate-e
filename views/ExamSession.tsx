@@ -55,10 +55,10 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
           </div>
         </main>
 
-        {/* Proctoring Sidebar - Reduced from 380px to 320px */}
+        {/* Proctoring Sidebar */}
         <aside className="w-full md:w-[320px] bg-white dark:bg-[#0B0C0E] border-l border-slate-200 dark:border-[#22252B] flex flex-col shadow-2xl z-30 shrink-0 transition-colors">
           
-          {/* Sidebar Header & Stats - Reduced padding from px-6 to px-5 */}
+          {/* Sidebar Header & Stats */}
           <div className="px-5 py-6 border-b border-slate-100 dark:border-[#22252B]">
             <div className="flex items-center justify-between mb-1">
               <h3 className="text-slate-900 dark:text-white text-lg font-bold tracking-tight">Session #882-192</h3>
@@ -109,32 +109,50 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
             </button>
           </div>
 
-          {/* Content Area - Reduced padding from p-6 to p-5 */}
-          <div className="flex-1 overflow-y-auto custom-scrollbar p-5 flex flex-col gap-5">
+          {/* Content Area - Changed to flex-col with h-full layout */}
+          <div className="flex-1 overflow-y-auto custom-scrollbar flex flex-col min-h-0">
             {activeTab === 'exam' ? (
-              <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
-                <div className="space-y-2.5">
-                  <label className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.1em]">Active Question</label>
-                  <div className="bg-slate-50 dark:bg-[#1A1C1E] border border-slate-200 dark:border-white/5 rounded-xl p-4 italic text-slate-700 dark:text-slate-300 text-sm font-medium leading-relaxed shadow-sm">
-                    "Explain how the Heisenberg Uncertainty Principle relates to the observation of quantum particles..."
+              <div className="flex-1 flex flex-col p-5 animate-in fade-in slide-in-from-right-4 duration-300">
+                <div className="flex-1 space-y-5">
+                  <div className="space-y-2">
+                    <label className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.1em]">Active Question</label>
+                    <div className="bg-slate-50 dark:bg-[#1A1C1E] border border-slate-200 dark:border-white/5 rounded-xl p-4 italic text-slate-700 dark:text-slate-300 text-sm font-medium leading-relaxed shadow-sm">
+                      "Explain how the Heisenberg Uncertainty Principle relates to the observation of quantum particles..."
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.1em]">Retrieval Result</label>
+                    <div className="bg-red-50 dark:bg-[#1A0C0E] border border-red-100 dark:border-red-900/30 rounded-xl p-7 flex flex-col items-center text-center shadow-inner">
+                       <div className="size-10 rounded-full bg-red-100 dark:bg-red-500/10 flex items-center justify-center mb-3">
+                          <span className="material-symbols-outlined text-red-600 dark:text-red-500 text-2xl">search_off</span>
+                       </div>
+                       <p className="text-slate-900 dark:text-white font-bold text-sm mb-1">Answer Not Found</p>
+                       <p className="text-slate-500 dark:text-slate-400 text-[11px] font-semibold leading-relaxed px-2">
+                          High-confidence match not found in database.
+                       </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="space-y-2.5">
-                  <label className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.1em]">Retrieval Result</label>
-                  <div className="bg-red-50 dark:bg-[#1A0C0E] border border-red-100 dark:border-red-900/30 rounded-xl p-8 flex flex-col items-center text-center shadow-inner">
-                     <div className="size-12 rounded-full bg-red-100 dark:bg-red-500/10 flex items-center justify-center mb-4">
-                        <span className="material-symbols-outlined text-red-600 dark:text-red-500 text-3xl">search_off</span>
-                     </div>
-                     <p className="text-slate-900 dark:text-white font-bold text-sm mb-1">Answer Not Found</p>
-                     <p className="text-slate-500 dark:text-slate-400 text-[11px] font-semibold leading-relaxed px-2">
-                        High-confidence match not found in database.
-                     </p>
-                  </div>
+                {/* Compact Action Buttons Section - Aligned to Bottom */}
+                <div className="space-y-2.5 pt-6 mt-auto animate-in slide-in-from-bottom-2 duration-300">
+                  <button className="w-full h-[44px] bg-[#008f5d] hover:bg-[#007a4f] text-white font-bold rounded-xl transition-all shadow-md shadow-emerald-500/10 flex items-center justify-center gap-2 group">
+                    <span className="material-symbols-outlined text-[20px]">person_search</span>
+                    <span className="text-sm tracking-tight">Agent Has Answer ($5.00)</span>
+                  </button>
+
+                  <button className="w-full h-[44px] bg-white dark:bg-[#151719] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white font-bold rounded-xl hover:bg-slate-50 dark:hover:bg-[#1a1c1e] transition-all text-sm shadow-sm">
+                    Skip
+                  </button>
+
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400 italic text-center font-medium opacity-80 px-2 pt-1 leading-normal">
+                    Verified agents provide accurate answers within 60 seconds.
+                  </p>
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-left-4 duration-300">
+              <div className="flex flex-col gap-4 p-5 animate-in fade-in slide-in-from-left-4 duration-300">
                 {messages.map((m, i) => (
                   <div key={i} className={`flex flex-col gap-1 max-w-[90%] ${m.isSelf ? 'self-end items-end' : 'self-start'}`}>
                     <span className="text-[9px] font-bold text-slate-400 dark:text-slate-500 tracking-tight">{m.sender} • {m.time}</span>
