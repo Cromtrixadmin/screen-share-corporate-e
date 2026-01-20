@@ -44,7 +44,7 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
                  Data Visualization Feed
                </div>
             </div>
-            <div className="absolute top-4 right-4 bg-black/60 backdrop-blur px-3 py-1.5 rounded text-xs font-medium text-white/70 border border-white/10 pointer-events-none">
+            <div className="absolute top-4 right-4 bg-black/60 backdrop-blur px-3 py-1.5 rounded text-xs font-bold text-white/70 border border-white/10 pointer-events-none tracking-tight">
               Remote • 1920 x 1080
             </div>
           </div>
@@ -60,17 +60,17 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
               </span>
-              <span className="text-emerald-500 text-xs font-bold uppercase tracking-wider">Live</span>
+              <span className="text-emerald-500 text-xs font-bold">Live</span>
             </div>
           </div>
           <p className="text-slate-400 text-xs mb-5">Connected to MacBook Pro (M2)</p>
           <div className="grid grid-cols-2 gap-3 mb-5">
             <div className="bg-[#22252B] rounded-lg p-3 border border-white/5 text-center">
-              <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider block mb-1">Duration</span>
+              <span className="text-slate-500 text-xs font-bold block mb-1">Duration</span>
               <p className="text-white text-xl font-bold tabular-nums">00:14:23</p>
             </div>
             <div className="bg-[#22252B] rounded-lg p-3 border border-white/5 text-center">
-              <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider block mb-1">Latency</span>
+              <span className="text-slate-500 text-xs font-bold block mb-1">Latency</span>
               <p className="text-emerald-400 text-xl font-bold tabular-nums">24ms</p>
             </div>
           </div>
@@ -89,17 +89,17 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
           {activeTab === 'exam' ? (
             <div className="space-y-6">
               <div className="space-y-2">
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Active Question</label>
-                <div className="bg-[#22252B]/50 border border-white/5 rounded-xl p-4 italic text-slate-300 text-sm">
+                <label className="text-xs font-bold text-slate-500">Active Question</label>
+                <div className="bg-[#22252B]/50 border border-white/5 rounded-xl p-4 italic text-slate-300 text-sm font-medium">
                   "Explain how the Heisenberg Uncertainty Principle relates to the observation of quantum particles..."
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Retrieval Result</label>
+                <label className="text-xs font-bold text-slate-500">Retrieval Result</label>
                 <div className="bg-red-950/20 border border-red-900/40 rounded-xl p-6 text-center">
                    <span className="material-symbols-outlined text-red-500 text-4xl opacity-40">search_off</span>
                    <p className="text-white font-bold text-sm mt-2">Answer Not Found</p>
-                   <p className="text-slate-500 text-[10px] mt-1">High-confidence match not found in database.</p>
+                   <p className="text-slate-500 text-[10px] mt-1 font-bold">High-confidence match not found in database.</p>
                 </div>
               </div>
               <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-xl transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2">
@@ -111,9 +111,9 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
             <div className="flex flex-col gap-4">
               {messages.map((m, i) => (
                 <div key={i} className={`flex flex-col gap-1 max-w-[85%] ${m.isSelf ? 'self-end items-end' : 'self-start'}`}>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{m.sender} • {m.time}</span>
+                  <span className="text-[10px] font-bold text-slate-500 tracking-tight">{m.sender} • {m.time}</span>
                   <div className={`p-3 rounded-2xl ${m.isSelf ? 'bg-primary text-white rounded-tr-none' : 'bg-[#22252B] text-slate-200 rounded-tl-none border border-white/5'}`}>
-                    <p className="text-sm">{m.text}</p>
+                    <p className="text-sm font-medium">{m.text}</p>
                   </div>
                 </div>
               ))}
@@ -123,7 +123,7 @@ const ExamSession: React.FC<ExamSessionProps> = ({ onEnd }) => {
 
         <div className="p-4 border-t border-[#22252B]">
           <div className="relative flex items-center bg-[#22252B] rounded-xl border border-[#22252B] p-2 focus-within:border-primary transition-colors">
-            <input className="flex-1 bg-transparent border-none focus:ring-0 text-sm text-white placeholder-slate-500 px-2" placeholder="Type a message..." />
+            <input className="flex-1 bg-transparent border-none focus:ring-0 text-sm text-white placeholder-slate-500 px-2 font-medium" placeholder="Type a message..." />
             <button className="p-2 bg-primary text-white rounded-lg"><span className="material-symbols-outlined text-[20px]">send</span></button>
           </div>
         </div>

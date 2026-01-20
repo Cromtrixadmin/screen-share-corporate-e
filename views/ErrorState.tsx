@@ -17,7 +17,7 @@ const ErrorState: React.FC<ErrorStateProps> = ({ onRetry, onNewLicense }) => {
         </div>
         <div className="p-10 flex flex-col items-center text-center">
           <h2 className="text-2xl font-bold text-white mb-3 tracking-tight">Identity Mismatch Detected</h2>
-          <p className="text-slate-400 text-sm leading-relaxed max-w-[320px] mb-8">
+          <p className="text-slate-400 text-sm leading-relaxed max-w-[320px] mb-8 font-medium">
             The current user does not match the authorized session starter. Access has been suspended for security.
           </p>
           <div className="flex flex-col w-full gap-3">
@@ -31,7 +31,7 @@ const ErrorState: React.FC<ErrorStateProps> = ({ onRetry, onNewLicense }) => {
             </button>
           </div>
           <div className="mt-8 pt-6 border-t border-white/5 w-full">
-            <div className="flex items-center justify-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">
+            <div className="flex items-center justify-center gap-2 text-[10px] font-bold text-slate-500 tracking-tight">
               <span className="material-symbols-outlined text-sm leading-none">security</span>
               Session Security Active
             </div>

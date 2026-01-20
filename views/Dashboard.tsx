@@ -68,7 +68,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
         {stats.map((stat, idx) => (
           <div key={idx} className="bg-surface-light dark:bg-surface-dark rounded-xl p-6 border border-border-light dark:border-border-dark shadow-sm relative overflow-hidden flex flex-col justify-between h-full gap-4">
             <div>
-              <p className="text-text-secondary dark:text-text-secondary-dark text-sm font-semibold mb-2">{stat.label}</p>
+              <p className="text-text-secondary dark:text-text-secondary-dark text-sm font-bold mb-2">{stat.label}</p>
               <div className="flex items-baseline gap-1">
                 <span className="text-text-main dark:text-white text-3xl font-bold">{stat.value}</span>
               </div>
@@ -118,7 +118,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
         </div>
 
         {/* Table Header */}
-        <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-gray-50 dark:bg-[#151b1e] border-b border-border-light dark:border-border-dark text-xs font-semibold text-text-secondary dark:text-text-secondary-dark tracking-wider uppercase">
+        <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-gray-50 dark:bg-[#151b1e] border-b border-border-light dark:border-border-dark text-xs font-bold text-text-secondary dark:text-text-secondary-dark tracking-wide">
           <div className="col-span-4">Reseller Name / Id</div>
           <div className="col-span-2">Role</div>
           <div className="col-span-2">Active Licenses</div>
@@ -224,7 +224,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
               </div>
               <div className="col-span-2 w-full md:w-auto pl-11 md:pl-0">
                 <p className="text-orange-600 dark:text-yellow-500 text-sm font-mono font-bold">₹12.50</p>
-                <p className="text-[10px] text-text-secondary dark:text-text-secondary-dark">Low Balance</p>
+                <p className="text-[10px] text-text-secondary dark:text-text-secondary-dark font-medium">Low Balance</p>
               </div>
               <div className="col-span-1 w-full md:w-auto pl-11 md:pl-0">
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-orange-50 dark:bg-yellow-500/10 text-orange-600 dark:text-yellow-500 border border-orange-100 dark:border-yellow-500/20">
@@ -241,7 +241,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
         {/* Footer Pagination */}
         <div className="px-6 py-4 border-t border-border-light dark:border-border-dark grid grid-cols-1 sm:grid-cols-3 items-center gap-4 bg-gray-50/30 dark:bg-transparent">
           <div className="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start">
-            <span className="text-xs text-text-secondary dark:text-text-secondary-dark whitespace-nowrap">Rows Per Page:</span>
+            <span className="text-xs text-text-secondary dark:text-text-secondary-dark font-semibold whitespace-nowrap">Rows Per Page:</span>
             <div className="relative">
               <select className="appearance-none bg-white dark:bg-background-dark text-text-main dark:text-white text-xs rounded border border-border-light dark:border-border-dark focus:outline-none cursor-pointer py-1.5 pl-3 pr-8 w-16 text-center shadow-sm">
                 <option>10</option>
@@ -253,11 +253,11 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
             </div>
           </div>
           <div className="flex justify-center">
-            <p className="text-xs text-text-secondary dark:text-text-secondary-dark text-center">Showing 3 Of 128</p>
+            <p className="text-xs text-text-secondary dark:text-text-secondary-dark text-center font-medium">Showing 3 Of 128</p>
           </div>
           <div className="flex gap-2 w-full sm:w-auto justify-center sm:justify-end">
-            <button className="px-3 py-1.5 text-xs font-medium text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white bg-white dark:bg-background-dark rounded border border-border-light dark:border-border-dark hover:border-gray-400 transition-all shadow-sm">Previous</button>
-            <button className="px-3 py-1.5 text-xs font-medium text-text-main dark:text-white bg-white dark:bg-surface-dark rounded border border-border-light dark:border-border-dark hover:border-primary hover:text-primary transition-all shadow-sm">Next</button>
+            <button className="px-3 py-1.5 text-xs font-bold text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white bg-white dark:bg-background-dark rounded border border-border-light dark:border-border-dark hover:border-gray-400 transition-all shadow-sm">Previous</button>
+            <button className="px-3 py-1.5 text-xs font-bold text-text-main dark:text-white bg-white dark:bg-surface-dark rounded border border-border-light dark:border-border-dark hover:border-primary hover:text-primary transition-all shadow-sm">Next</button>
           </div>
         </div>
       </section>
@@ -271,7 +271,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
           </div>
           <div className="flex items-center gap-3">
             <div className="relative group">
-              <button className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-background-dark hover:bg-gray-50 dark:hover:bg-border-dark text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white rounded-lg text-sm border border-border-light dark:border-border-dark transition-colors shadow-sm">
+              <button className="flex items-center gap-2 px-3 py-2 bg-white dark:bg-background-dark hover:bg-gray-50 dark:hover:bg-border-dark text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white rounded-lg text-sm border border-border-light dark:border-border-dark transition-colors shadow-sm font-medium">
                 <span className="material-symbols-outlined text-[18px]">calendar_today</span>
                 This Month
                 <span className="material-symbols-outlined text-[18px]">expand_more</span>
@@ -283,7 +283,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
           </div>
         </div>
         
-        <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-gray-50 dark:bg-[#151b1e] border-b border-border-light dark:border-border-dark text-xs font-semibold text-text-secondary dark:text-text-secondary-dark tracking-wider uppercase">
+        <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-gray-50 dark:bg-[#151b1e] border-b border-border-light dark:border-border-dark text-xs font-bold text-text-secondary dark:text-text-secondary-dark tracking-wide">
           <div className="col-span-3">Date</div>
           <div className="col-span-3">Partner Id</div>
           <div className="col-span-4">Exam</div>
@@ -305,7 +305,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
               <span className="size-1.5 rounded-full bg-primary"></span>
               Aws Certified Solutions Architect
             </div>
-            <div className="col-span-2 w-full text-right text-text-main dark:text-white text-sm font-mono uppercase">120 Min</div>
+            <div className="col-span-2 w-full text-right text-text-main dark:text-white text-sm font-mono">120 Min</div>
           </div>
 
           {/* History Item 2 */}
@@ -322,14 +322,14 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
               <span className="size-1.5 rounded-full bg-primary"></span>
               Cisco Ccna 200-301
             </div>
-            <div className="col-span-2 w-full text-right text-text-main dark:text-white text-sm font-mono uppercase">90 Min</div>
+            <div className="col-span-2 w-full text-right text-text-main dark:text-white text-sm font-mono">90 Min</div>
           </div>
         </div>
 
         {/* Footer Pagination */}
         <div className="px-6 py-4 border-t border-border-light dark:border-border-dark grid grid-cols-1 sm:grid-cols-3 items-center gap-4 bg-gray-50/30 dark:bg-transparent">
           <div className="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start">
-            <span className="text-xs text-text-secondary dark:text-text-secondary-dark whitespace-nowrap">Rows Per Page:</span>
+            <span className="text-xs text-text-secondary dark:text-text-secondary-dark font-semibold whitespace-nowrap">Rows Per Page:</span>
             <div className="relative">
               <select className="appearance-none bg-white dark:bg-background-dark text-text-main dark:text-white text-xs rounded border border-border-light dark:border-border-dark focus:outline-none cursor-pointer py-1.5 pl-3 pr-8 w-16 text-center shadow-sm">
                 <option>10</option>
@@ -341,11 +341,11 @@ const Dashboard: React.FC<DashboardProps> = ({ onAddBalance, onViewProfile }) =>
             </div>
           </div>
           <div className="flex justify-center">
-            <p className="text-xs text-text-secondary dark:text-text-secondary-dark text-center">Showing 3 Of 128</p>
+            <p className="text-xs text-text-secondary dark:text-text-secondary-dark text-center font-medium">Showing 3 Of 128</p>
           </div>
           <div className="flex gap-2 w-full sm:w-auto justify-center sm:justify-end">
-            <button className="px-3 py-1.5 text-xs font-medium text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white bg-white dark:bg-background-dark rounded border border-border-light dark:border-border-dark hover:border-gray-400 transition-all shadow-sm">Previous</button>
-            <button className="px-3 py-1.5 text-xs font-medium text-text-main dark:text-white bg-white dark:bg-surface-dark rounded border border-border-light dark:border-border-dark hover:border-primary hover:text-primary transition-all shadow-sm">Next</button>
+            <button className="px-3 py-1.5 text-xs font-bold text-text-secondary dark:text-text-secondary-dark hover:text-text-main dark:hover:text-white bg-white dark:bg-background-dark rounded border border-border-light dark:border-border-dark hover:border-gray-400 transition-all shadow-sm">Previous</button>
+            <button className="px-3 py-1.5 text-xs font-bold text-text-main dark:text-white bg-white dark:bg-surface-dark rounded border border-border-light dark:border-border-dark hover:border-primary hover:text-primary transition-all shadow-sm">Next</button>
           </div>
         </div>
       </section>

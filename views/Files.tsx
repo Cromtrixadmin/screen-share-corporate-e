@@ -61,7 +61,7 @@ const Files: React.FC = () => {
                   <span className={`material-symbols-outlined text-[24px] ${selectedExam === cat.name ? 'text-primary' : 'text-text-secondary group-hover:text-primary'}`}>folder</span>
                   <div className="flex flex-col min-w-0">
                     <span className="font-bold text-sm truncate">{cat.name}</span>
-                    <span className="text-[10px] opacity-70">{cat.count} Files • {cat.size}</span>
+                    <span className="text-[10px] opacity-70 font-medium">{cat.count} Files • {cat.size}</span>
                   </div>
                 </div>
               </div>
@@ -74,7 +74,7 @@ const Files: React.FC = () => {
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-bold text-charcoal dark:text-white tracking-tight">{selectedExam}</h1>
-                <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-primary/10 text-primary border border-primary/20 tracking-wide uppercase">Active Exam</span>
+                <span className="px-2.5 py-0.5 rounded text-[10px] font-bold bg-primary/10 text-primary border border-primary/20 tracking-wide">Active Exam</span>
               </div>
               <p className="text-text-secondary dark:text-text-secondary-dark text-sm">Manage Study Materials, Dump Files, and Resources.</p>
             </div>
@@ -97,7 +97,7 @@ const Files: React.FC = () => {
           <div className="flex-1 bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark shadow-sm flex flex-col overflow-hidden">
             <div className="px-6 py-4 bg-slate-50 dark:bg-background-dark/50 border-b border-slate-200 dark:border-border-dark flex justify-between items-center sticky top-0 z-10">
               <h4 className="text-charcoal dark:text-white font-bold text-sm">Files & Resources</h4>
-              <div className="flex gap-4 text-xs text-text-secondary dark:text-text-secondary-dark font-bold uppercase tracking-wider">
+              <div className="flex gap-4 text-xs text-text-secondary dark:text-text-secondary-dark font-bold tracking-tight">
                 <span>Total Storage: <span className="text-charcoal dark:text-white">66.6 MB</span></span>
                 <span>Files: <span className="text-charcoal dark:text-white">{files.length}</span></span>
               </div>
@@ -117,7 +117,7 @@ const Files: React.FC = () => {
                         </div>
                         <div>
                           <h4 className="text-charcoal dark:text-white text-sm font-bold group-hover:text-primary transition-colors cursor-pointer truncate" title={file.name}>{file.name}</h4>
-                          <p className="text-xs text-text-secondary dark:text-text-secondary-dark mt-1">{file.size} • {file.date}</p>
+                          <p className="text-xs text-text-secondary dark:text-text-secondary-dark mt-1 font-medium">{file.size} • {file.date}</p>
                         </div>
                         <div className="flex gap-2 mt-auto">
                           <button className="flex-1 h-9 rounded bg-primary hover:bg-primary-hover text-white text-xs font-bold flex items-center justify-center gap-2 transition-all">
@@ -142,7 +142,7 @@ const Files: React.FC = () => {
                         </div>
                         <div className="flex-1 min-w-0">
                           <h4 className="text-sm font-bold text-charcoal dark:text-white truncate">{file.name}</h4>
-                          <p className="text-xs text-text-secondary">{file.size} • {file.date}</p>
+                          <p className="text-xs text-text-secondary font-medium">{file.size} • {file.date}</p>
                         </div>
                         <div className="flex items-center gap-2">
                           <button className="size-9 flex items-center justify-center text-text-secondary hover:text-primary transition-colors">

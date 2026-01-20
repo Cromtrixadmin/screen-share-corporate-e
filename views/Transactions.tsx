@@ -16,7 +16,7 @@ const Transactions: React.FC = () => {
   ];
 
   const TableHeader = ({ cols }: { cols: { label: string, span: string, align?: string }[] }) => (
-    <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-slate-50 dark:bg-[#151b1e] border-b border-slate-200 dark:border-border-dark text-[10px] font-bold text-text-secondary dark:text-text-secondary-dark tracking-widest uppercase">
+    <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-slate-50 dark:bg-[#151b1e] border-b border-slate-200 dark:border-border-dark text-[11px] font-bold text-text-secondary dark:text-text-secondary-dark tracking-wide">
       {cols.map((col, i) => (
         <div key={i} className={`${col.span} ${col.align === 'right' ? 'text-right' : ''}`}>{col.label}</div>
       ))}

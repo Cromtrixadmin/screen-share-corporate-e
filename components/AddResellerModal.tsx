@@ -19,7 +19,7 @@ const AddResellerModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </div>
             <div>
               <h2 className="text-charcoal dark:text-white text-xl font-bold">Add New Reseller</h2>
-              <p className="text-text-secondary dark:text-text-secondary-dark text-xs uppercase tracking-wider font-bold">Create a new partner in your network</p>
+              <p className="text-text-secondary dark:text-text-secondary-dark text-xs font-bold tracking-tight">Create a new partner in your network</p>
             </div>
           </div>
           <button onClick={onClose} className="text-text-secondary hover:text-charcoal dark:hover:text-white transition-colors">
@@ -29,25 +29,25 @@ const AddResellerModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         <form className="p-6 space-y-6" onSubmit={(e) => { e.preventDefault(); onClose(); }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Reseller Name</label>
-              <input className="w-full bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-charcoal dark:text-white text-sm focus:ring-1 focus:ring-primary outline-none px-4 py-2.5" placeholder="e.g. Apex Solutions" type="text"/>
+              <label className="text-sm font-bold text-slate-600 dark:text-slate-400 ml-1">Reseller Name</label>
+              <input className="w-full bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-charcoal dark:text-white text-sm focus:ring-1 focus:ring-primary outline-none px-4 py-2.5 font-medium" placeholder="e.g. Apex Solutions" type="text"/>
             </div>
             <div className="space-y-2">
-              <label className="text-xs font-bold text-slate-500 uppercase tracking-widest ml-1">Contact Email</label>
-              <input className="w-full bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-charcoal dark:text-white text-sm focus:ring-1 focus:ring-primary outline-none px-4 py-2.5" placeholder="contact@agency.com" type="email"/>
+              <label className="text-sm font-bold text-slate-600 dark:text-slate-400 ml-1">Contact Email</label>
+              <input className="w-full bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-charcoal dark:text-white text-sm focus:ring-1 focus:ring-primary outline-none px-4 py-2.5 font-medium" placeholder="contact@agency.com" type="email"/>
             </div>
           </div>
           <div className="bg-slate-50 dark:bg-background-dark/50 border border-slate-200 dark:border-border-dark rounded-xl p-5 space-y-4">
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-primary text-[20px]">payments</span>
-              <h3 className="text-charcoal dark:text-white text-xs font-bold tracking-widest uppercase">Pricing Strategy</h3>
+              <h3 className="text-charcoal dark:text-white text-sm font-bold">Pricing Strategy</h3>
             </div>
             <div className="space-y-3">
-              <label className="text-sm font-medium text-text-secondary block">Fixed Price per License</label>
+              <label className="text-sm font-bold text-text-secondary block">Fixed Price per License</label>
               <div className="relative flex items-center">
-                <span className="absolute left-4 text-text-secondary font-mono">₹</span>
+                <span className="absolute left-4 text-text-secondary font-mono font-bold">₹</span>
                 <input className="w-full bg-white dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-charcoal dark:text-white text-base font-mono focus:ring-primary focus:border-primary placeholder:text-text-secondary/30 pl-8 pr-4 py-3 outline-none" placeholder="0.00" step="0.01" type="number"/>
-                <div className="absolute right-4 text-[10px] font-bold text-text-secondary bg-slate-100 dark:bg-surface-dark px-2 py-1 rounded border border-slate-200 dark:border-border-dark uppercase">INR / LIC</div>
+                <div className="absolute right-4 text-[10px] font-bold text-text-secondary bg-slate-100 dark:bg-surface-dark px-2 py-1 rounded border border-slate-200 dark:border-border-dark uppercase tracking-tight">INR / LIC</div>
               </div>
             </div>
           </div>

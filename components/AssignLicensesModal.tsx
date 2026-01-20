@@ -19,7 +19,7 @@ const AssignLicensesModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </div>
             <div>
               <h3 className="text-xl font-bold text-charcoal dark:text-white leading-tight">Assign Licenses</h3>
-              <p className="text-text-secondary dark:text-text-secondary-dark text-xs mt-0.5">Allocate Inventory To The Reseller</p>
+              <p className="text-text-secondary dark:text-text-secondary-dark text-xs mt-0.5 font-bold">Allocate Inventory To The Reseller</p>
             </div>
           </div>
           <button onClick={onClose} className="text-text-secondary hover:text-charcoal dark:hover:text-white transition-colors">
@@ -29,7 +29,7 @@ const AssignLicensesModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         <div className="p-6 space-y-6">
           <div className="bg-slate-50 dark:bg-background-dark/50 border border-slate-200 dark:border-border-dark rounded-lg p-5 flex items-center justify-between">
             <div>
-              <p className="text-text-secondary dark:text-text-secondary-dark text-[10px] font-bold uppercase tracking-wider mb-1">Available Balance</p>
+              <p className="text-text-secondary dark:text-text-secondary-dark text-xs font-bold tracking-tight mb-1">Available Balance</p>
               <p className="text-charcoal dark:text-white text-3xl font-extrabold">1,550 <span className="text-sm font-normal text-text-secondary ml-1">Licenses</span></p>
             </div>
             <div className="size-12 rounded-full bg-primary flex items-center justify-center shadow-md border border-primary/20">
@@ -43,7 +43,7 @@ const AssignLicensesModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </div>
             <div className="relative">
               <input 
-                className="w-full bg-white dark:bg-background-dark border border-slate-200 dark:border-border-dark focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 text-base text-charcoal dark:text-white placeholder:text-slate-400 outline-none transition-all" 
+                className="w-full bg-white dark:bg-background-dark border border-slate-200 dark:border-border-dark focus:border-primary focus:ring-1 focus:ring-primary rounded-lg px-4 py-3 text-base text-charcoal dark:text-white placeholder:text-slate-400 outline-none transition-all font-bold" 
                 placeholder="Enter Amount To Assign" 
                 type="number" 
                 defaultValue={500}
@@ -56,7 +56,7 @@ const AssignLicensesModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
         <div className="p-6 bg-slate-50 dark:bg-background-dark/30 border-t border-slate-200 dark:border-border-dark flex items-center justify-end gap-3">
-          <button onClick={onClose} className="px-6 py-2.5 rounded-lg border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark text-charcoal dark:text-white font-semibold text-sm hover:bg-gray-50 dark:hover:bg-background-dark transition-colors">
+          <button onClick={onClose} className="px-6 py-2.5 rounded-lg border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark text-charcoal dark:text-white font-bold text-sm hover:bg-gray-50 dark:hover:bg-background-dark transition-colors">
             Cancel
           </button>
           <button onClick={onClose} className="px-6 py-2.5 rounded-lg bg-primary hover:bg-primary-hover text-white font-bold text-sm transition-all shadow-md">

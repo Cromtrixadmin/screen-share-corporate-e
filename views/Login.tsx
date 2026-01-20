@@ -24,21 +24,21 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
               <span className="material-symbols-outlined text-white text-[48px] drop-shadow-md">hub</span>
             </div>
             <h2 className="text-white text-3xl font-bold tracking-tight text-center">Nexus<span className="text-primary font-light">Resell</span></h2>
-            <p className="text-slate-400 text-sm mt-1 text-center font-medium">Exam Assistance & Monitoring Suite</p>
+            <p className="text-slate-400 text-sm mt-1 text-center font-bold">Exam Assistance & Monitoring Suite</p>
           </div>
 
           <form className="flex flex-col gap-5" onSubmit={(e) => { e.preventDefault(); onLogin(); }}>
             <div className="space-y-2">
-              <label className="block text-slate-400 text-xs font-bold uppercase tracking-widest ml-1">Username or Email</label>
+              <label className="block text-slate-400 text-sm font-bold ml-1">Username or Email</label>
               <div className="relative flex items-center">
-                <input className="w-full rounded-lg text-white focus:ring-1 focus:ring-primary border border-white/5 bg-[#0d1117] h-12 pl-11 pr-4 text-sm font-medium outline-none transition-all" placeholder="Enter your ID" type="text" />
+                <input className="w-full rounded-lg text-white focus:ring-1 focus:ring-primary border border-white/5 bg-[#0d1117] h-12 pl-11 pr-4 text-sm font-bold outline-none transition-all" placeholder="Enter your ID" type="text" />
                 <span className="absolute left-3.5 material-symbols-outlined text-[20px] text-slate-500">badge</span>
               </div>
             </div>
             <div className="space-y-2">
-              <label className="block text-slate-400 text-xs font-bold uppercase tracking-widest ml-1">Password</label>
+              <label className="block text-slate-400 text-sm font-bold ml-1">Password</label>
               <div className="relative flex items-center">
-                <input className="w-full rounded-lg text-white focus:ring-1 focus:ring-primary border border-white/5 bg-[#0d1117] h-12 pl-11 pr-12 text-sm font-medium outline-none transition-all" placeholder="••••••••" type="password" />
+                <input className="w-full rounded-lg text-white focus:ring-1 focus:ring-primary border border-white/5 bg-[#0d1117] h-12 pl-11 pr-12 text-sm font-bold outline-none transition-all" placeholder="••••••••" type="password" />
                 <span className="absolute left-3.5 material-symbols-outlined text-[20px] text-slate-500">lock_open</span>
               </div>
             </div>
