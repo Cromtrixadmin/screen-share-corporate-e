@@ -47,7 +47,7 @@ const Files: React.FC = () => {
             <h3 className="text-slate-900 dark:text-white font-bold text-base">Exam Categories</h3>
             <button 
               onClick={() => setIsAddExamModalOpen(true)}
-              className="size-9 flex items-center justify-center bg-primary/10 dark:bg-primary/20 text-primary border border-primary/20 dark:border-primary/30 rounded-lg hover:bg-primary transition-all hover:text-white"
+              className="size-9 flex items-center justify-center bg-primary/10 dark:bg-primary/20 text-primary border border-primary/20 dark:border-primary/30 rounded-lg hover:bg-primary transition-all hover:text-white shadow-none"
             >
               <span className="material-symbols-outlined">add</span>
             </button>
@@ -109,23 +109,23 @@ const Files: React.FC = () => {
               <p className="text-slate-500 dark:text-text-secondary text-sm">Manage study materials, dump files, and resources for this exam.</p>
             </div>
             <div className="flex gap-4 items-center">
-              <div className="flex items-center bg-slate-100 dark:bg-surface-darker rounded-lg border border-slate-200 dark:border-border-dark p-1">
+              <div className="flex items-center bg-slate-100 dark:bg-surface-darker rounded-lg border border-slate-200 dark:border-border-dark p-1 h-11">
                 <button 
                   onClick={() => setViewMode('grid')}
-                  className={`p-1.5 rounded transition-all ${viewMode === 'grid' ? 'bg-white dark:bg-surface-dark text-primary dark:text-white shadow-sm border border-slate-200 dark:border-border-dark' : 'text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white hover:bg-white dark:hover:bg-surface-dark'}`}
+                  className={`flex items-center justify-center w-9 h-full rounded transition-all shadow-none border-none ${viewMode === 'grid' ? 'bg-white dark:bg-surface-dark text-primary dark:text-white' : 'text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white hover:bg-white dark:hover:bg-surface-dark'}`}
                   title="Grid View"
                 >
                   <span className="material-symbols-outlined text-[20px]">grid_view</span>
                 </button>
                 <button 
                   onClick={() => setViewMode('list')}
-                  className={`p-1.5 rounded transition-all ${viewMode === 'list' ? 'bg-white dark:bg-surface-dark text-primary dark:text-white shadow-sm border border-slate-200 dark:border-border-dark' : 'text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white hover:bg-white dark:hover:bg-surface-dark'}`}
+                  className={`flex items-center justify-center w-9 h-full rounded transition-all shadow-none border-none ${viewMode === 'list' ? 'bg-white dark:bg-surface-dark text-primary dark:text-white' : 'text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white hover:bg-white dark:hover:bg-surface-dark'}`}
                   title="List View"
                 >
                   <span className="material-symbols-outlined text-[20px]">view_list</span>
                 </button>
               </div>
-              <button className="flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-lg font-bold text-sm transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-95">
+              <button className="flex items-center gap-2 px-5 h-11 bg-primary hover:bg-primary-hover text-white rounded-lg font-bold text-sm transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-95">
                 <span className="material-symbols-outlined text-[20px]">cloud_upload</span>
                 <span>Upload Files</span>
               </button>
@@ -168,7 +168,7 @@ const Files: React.FC = () => {
                         <div className="col-span-3 md:col-span-2 text-slate-500 dark:text-text-secondary text-sm font-mono">{file.size}</div>
                         <div className="col-span-3 hidden md:block text-slate-400 dark:text-text-secondary text-sm">{file.date}</div>
                         <div className="col-span-4 md:col-span-1 flex justify-end">
-                          <button className="size-9 flex items-center justify-center rounded-lg text-slate-400 dark:text-text-secondary hover:text-red-500 hover:bg-red-500/10 transition-colors">
+                          <button className="size-9 flex items-center justify-center rounded-lg text-slate-400 dark:text-text-secondary hover:text-red-400 hover:bg-red-400/10 transition-colors">
                             <span className="material-symbols-outlined text-[20px]">delete</span>
                           </button>
                         </div>
@@ -192,11 +192,11 @@ const Files: React.FC = () => {
                           <p className="text-xs text-slate-400 dark:text-text-secondary mt-1">{file.size} • {file.date}</p>
                         </div>
                         <div className="flex gap-2 mt-auto">
-                          <button className="flex-1 h-9 rounded bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark hover:bg-slate-50 dark:hover:bg-background-dark hover:border-primary/50 text-slate-700 dark:text-white text-xs font-bold flex items-center justify-center gap-2 transition-all">
+                          <button className="flex-1 h-9 rounded bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark hover:bg-slate-50 dark:hover:bg-background-dark hover:border-primary/50 text-slate-700 dark:text-white text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-none">
                             <span className="material-symbols-outlined text-[16px]">download</span>
                             Download
                           </button>
-                          <button className="size-9 rounded bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark hover:bg-red-500/10 hover:border-red-500/30 hover:text-red-500 dark:hover:text-red-400 text-slate-400 dark:text-text-secondary flex items-center justify-center transition-all">
+                          <button className="size-9 rounded bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark hover:bg-red-500/10 hover:border-red-500/30 hover:text-red-500 dark:hover:text-red-400 text-slate-400 dark:text-text-secondary flex items-center justify-center transition-all shadow-none">
                             <span className="material-symbols-outlined text-[18px]">delete</span>
                           </button>
                         </div>
@@ -257,7 +257,7 @@ const Files: React.FC = () => {
             <div className="flex items-center justify-end gap-3 px-6 py-4 bg-slate-50 dark:bg-surface-darker border-t border-slate-100 dark:border-border-dark">
               <button 
                 onClick={() => setIsAddExamModalOpen(false)}
-                className="px-5 py-2 text-sm font-semibold text-slate-500 dark:text-text-secondary hover:text-slate-900 dark:hover:text-white transition-colors rounded-lg hover:bg-slate-200 dark:hover:bg-white/5"
+                className="px-5 py-2 text-sm font-semibold text-slate-500 dark:text-text-secondary hover:text-slate-900 dark:hover:text-white transition-colors rounded-lg hover:bg-slate-200 dark:hover:bg-white/5 shadow-none"
               >
                 Cancel
               </button>
@@ -280,7 +280,7 @@ const Files: React.FC = () => {
               <h3 className="text-slate-900 dark:text-white text-lg font-bold">Edit Exam</h3>
               <button 
                 onClick={() => setIsEditExamModalOpen(false)}
-                className="text-slate-400 dark:text-text-secondary hover:text-slate-900 dark:hover:text-white transition-colors"
+                className="text-slate-400 dark:text-text-secondary hover:text-slate-900 dark:hover:text-white transition-colors shadow-none"
               >
                 <span className="material-symbols-outlined">close</span>
               </button>
@@ -289,7 +289,7 @@ const Files: React.FC = () => {
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-slate-500 dark:text-text-secondary tracking-wider uppercase">Exam Name</label>
                 <input 
-                  className="w-full bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark text-slate-900 dark:text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-primary block p-2.5 placeholder:text-slate-400 dark:placeholder:text-text-secondary outline-none transition-all" 
+                  className="w-full bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark text-slate-900 dark:text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-primary block p-2.5 placeholder:text-slate-400 dark:placeholder:text-text-secondary outline-none transition-all shadow-none" 
                   type="text" 
                   defaultValue={examToEdit || ''}
                 />
@@ -297,7 +297,7 @@ const Files: React.FC = () => {
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-slate-500 dark:text-text-secondary tracking-wider uppercase">Description</label>
                 <textarea 
-                  className="w-full bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark text-slate-900 dark:text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-primary block p-2.5 placeholder:text-slate-400 dark:placeholder:text-text-secondary outline-none resize-none transition-all" 
+                  className="w-full bg-slate-50 dark:bg-background-dark border border-slate-200 dark:border-border-dark text-slate-900 dark:text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-primary block p-2.5 placeholder:text-slate-400 dark:placeholder:text-text-secondary outline-none resize-none transition-all shadow-none" 
                   placeholder="Enter exam description..." 
                   rows={4}
                 ></textarea>
@@ -306,7 +306,7 @@ const Files: React.FC = () => {
             <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-slate-100 dark:border-border-dark bg-slate-50 dark:bg-surface-darker rounded-b-xl text-right">
               <button 
                 onClick={() => setIsEditExamModalOpen(false)}
-                className="px-4 py-2 text-sm font-semibold text-slate-500 dark:text-text-secondary hover:text-slate-900 dark:hover:text-white transition-colors rounded-lg hover:bg-slate-200 dark:hover:bg-white/5"
+                className="px-4 py-2 text-sm font-semibold text-slate-500 dark:text-text-secondary hover:text-slate-900 dark:hover:text-white transition-colors rounded-lg hover:bg-slate-200 dark:hover:bg-white/5 shadow-none"
               >
                 Cancel
               </button>
