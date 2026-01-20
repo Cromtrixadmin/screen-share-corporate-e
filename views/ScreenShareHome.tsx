@@ -50,7 +50,7 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
           </button>
           <button 
             onClick={onSelectDashboard}
-            className="bg-primary-home hover:bg-[#15424a] text-white font-bold px-6 py-2 rounded-lg shadow-lg shadow-primary-home/20 transition-all active:scale-[0.98] flex items-center gap-2"
+            className="bg-primary-home hover:bg-[#15424a] text-white font-bold px-6 py-2 rounded-lg shadow-lg shadow-primary-home/20 transition-all active:scale-[0.98] flex items-center gap-2 text-sm"
           >
             <span className="material-symbols-outlined text-[18px]">login</span>
             <span>Login</span>
@@ -77,25 +77,25 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
             
             <div className="mb-6 flex-1 flex flex-col justify-start">
               <div className="w-full max-w-sm mx-auto">
-                <label className="block text-slate-500 dark:text-[#a2b1b4] text-sm font-semibold mb-2 ml-1">Your Address</label>
+                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Your Address</label>
                 <div className="relative group/input mb-6">
-                  <div className="flex items-center bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] rounded-xl h-12 px-4 transition-all duration-300 group-hover/input:border-primary-home/50 group-focus-within/input:border-primary-home group-focus-within/input:ring-1 group-focus-within/input:ring-primary-home">
-                    <input className="bg-transparent border-none w-full text-slate-900 dark:text-white text-lg font-bold tracking-wide font-mono focus:ring-0 cursor-default outline-none" readOnly type="text" value="455 901 228"/>
-                    <button className="text-slate-400 dark:text-[#a2b1b4] hover:text-primary-home dark:hover:text-white hover:bg-white dark:hover:bg-[#2b3436] p-2 rounded-lg transition-colors" title="Copy ID">
-                      <span className="material-symbols-outlined text-[20px]">content_copy</span>
+                  <div className="flex items-center bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] rounded-xl h-11 px-4 transition-all duration-300 group-hover/input:border-primary-home/30">
+                    <input className="bg-transparent border-none w-full text-slate-900 dark:text-white text-base font-bold tracking-[0.15em] font-mono focus:ring-0 cursor-default outline-none" readOnly type="text" value="455 901 228"/>
+                    <button className="text-slate-400 dark:text-[#a2b1b4] hover:text-primary-home dark:hover:text-white p-2 transition-colors" title="Copy ID">
+                      <span className="material-symbols-outlined text-[18px]">content_copy</span>
                     </button>
                   </div>
                 </div>
-                <label className="block text-slate-500 dark:text-[#a2b1b4] text-sm font-semibold mb-2 ml-1">Security Code</label>
+                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Security Code</label>
                 <div className="relative group/input mb-8">
-                  <div className="flex items-center bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] rounded-xl h-12 px-4 transition-all duration-300 group-hover/input:border-primary-home/50 group-focus-within/input:border-primary-home group-focus-within/input:ring-1 group-focus-within/input:ring-primary-home">
-                    <input className="bg-transparent border-none w-full text-slate-900 dark:text-white text-lg font-bold tracking-wide font-mono focus:ring-0 cursor-default outline-none" readOnly type="text" value="x92mP5"/>
-                    <div className="flex gap-1">
-                      <button className="text-slate-400 dark:text-[#a2b1b4] hover:text-primary-home dark:hover:text-white hover:bg-white dark:hover:bg-[#2b3436] p-2 rounded-lg transition-colors" title="Generate New Code">
-                        <span className="material-symbols-outlined text-[20px]">refresh</span>
+                  <div className="flex items-center bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] rounded-xl h-11 px-4 transition-all duration-300 group-hover/input:border-primary-home/30">
+                    <input className="bg-transparent border-none w-full text-slate-900 dark:text-white text-base font-bold tracking-[0.1em] font-mono focus:ring-0 cursor-default outline-none" readOnly type="text" value="x92mP5"/>
+                    <div className="flex gap-1.5">
+                      <button className="text-slate-400 dark:text-[#a2b1b4] hover:text-primary-home dark:hover:text-white p-2 transition-colors" title="Generate New Code">
+                        <span className="material-symbols-outlined text-[18px]">refresh</span>
                       </button>
-                      <button className="text-slate-400 dark:text-[#a2b1b4] hover:text-primary-home dark:hover:text-white hover:bg-white dark:hover:bg-[#2b3436] p-2 rounded-lg transition-colors" title="Copy Code">
-                        <span className="material-symbols-outlined text-[20px]">content_copy</span>
+                      <button className="text-slate-400 dark:text-[#a2b1b4] hover:text-primary-home dark:hover:text-white p-2 transition-colors" title="Copy Code">
+                        <span className="material-symbols-outlined text-[18px]">content_copy</span>
                       </button>
                     </div>
                   </div>
@@ -105,12 +105,12 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
             
             <div className="mt-auto pt-6 border-t border-slate-200 dark:border-[#2b3436] flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-sm">lock</span>
-                <span className="text-slate-500 dark:text-[#a2b1b4] text-xs font-medium">End-To-End Encrypted</span>
+                <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[16px]">lock</span>
+                <span className="text-slate-500 dark:text-[#a2b1b4] text-[11px] font-bold uppercase tracking-wide">End-To-End Encrypted</span>
               </div>
-              <button className="text-primary-home hover:text-primary-home/80 text-sm font-bold flex items-center gap-1">
+              <button className="text-primary-home hover:text-primary-home/80 text-xs font-bold flex items-center gap-1">
                 Unattended Access
-                <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+                <span className="material-symbols-outlined text-[14px]">open_in_new</span>
               </button>
             </div>
           </div>
@@ -127,43 +127,43 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
             
             <div className="mb-6 flex-1 flex flex-col justify-start">
               <div className="w-full max-w-sm mx-auto">
-                <label className="block text-slate-500 dark:text-[#a2b1b4] text-sm font-semibold mb-2 ml-1">Partner ID</label>
+                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Partner ID</label>
                 <div className="relative mb-6">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[20px]">search</span>
+                    <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[18px]">search</span>
                   </div>
-                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-slate-900 dark:text-white text-lg font-bold placeholder:text-slate-400 dark:placeholder:text-[#3d4a4d] rounded-xl h-12 pl-12 pr-4 focus:border-primary-home focus:ring-1 focus:ring-primary-home transition-all shadow-inner font-mono tracking-wide outline-none" placeholder="Enter Partner ID" type="text"/>
+                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Partner ID" type="text" defaultValue="35464645645"/>
                 </div>
-                <label className="block text-slate-500 dark:text-[#a2b1b4] text-sm font-semibold mb-2 ml-1">Passcode</label>
+                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Passcode</label>
                 <div className="relative mb-8">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[20px]">lock</span>
+                    <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[18px]">lock</span>
                   </div>
-                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-slate-900 dark:text-white text-lg font-bold placeholder:text-slate-400 dark:placeholder:text-[#3d4a4d] rounded-xl h-12 pl-12 pr-4 focus:border-primary-home focus:ring-1 focus:ring-primary-home transition-all shadow-inner font-mono tracking-wide outline-none" placeholder="Enter Passcode" type="password"/>
+                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Passcode" type="password"/>
                 </div>
                 <button 
                   onClick={onSelectRemote}
-                  className="w-full bg-primary-home hover:bg-[#15424a] text-white font-bold h-12 rounded-xl shadow-lg shadow-primary-home/20 transition-all active:scale-[0.98] flex items-center justify-center gap-3 text-base group"
+                  className="w-full bg-primary-home hover:bg-[#15424a] text-white font-bold h-11 rounded-xl shadow-lg shadow-primary-home/20 transition-all active:scale-[0.98] flex items-center justify-center gap-3 text-sm group"
                 >
                   <span>Connect</span>
-                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform text-[18px]">arrow_forward</span>
                 </button>
               </div>
             </div>
             
             <div className="mt-auto pt-6 border-t border-slate-200 dark:border-[#2b3436] flex items-center justify-between opacity-60">
-              <span className="text-slate-500 dark:text-[#a2b1b4] text-xs">Version 4.2.0 (Stable)</span>
+              <span className="text-slate-500 dark:text-[#a2b1b4] text-[10px] font-bold uppercase tracking-widest">Version 4.2.0 Stable</span>
               <div className="flex gap-2">
-                <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-                <div className="w-2 h-2 rounded-full bg-slate-300 dark:bg-[#2b3436]"></div>
-                <div className="w-2 h-2 rounded-full bg-slate-300 dark:bg-[#2b3436]"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-[#2b3436]"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-[#2b3436]"></div>
               </div>
             </div>
           </div>
         </div>
 
-        <button className="absolute bottom-8 right-8 bg-slate-200 dark:bg-[#2b3436] hover:bg-primary-home hover:text-white text-slate-600 dark:text-[#a2b1b4] w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all z-20">
-          <span className="material-symbols-outlined">question_mark</span>
+        <button className="absolute bottom-8 right-8 bg-slate-200 dark:bg-[#2b3436] hover:bg-primary-home hover:text-white text-slate-600 dark:text-[#a2b1b4] w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all z-20">
+          <span className="material-symbols-outlined text-[20px]">help</span>
         </button>
       </main>
     </div>

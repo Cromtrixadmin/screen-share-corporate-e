@@ -179,7 +179,7 @@ const ResellerProfile: React.FC<ResellerProfileProps> = ({ onBack, onAddBalance 
                       onChange={handlePriceChange}
                       className="w-full bg-white dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg text-text-main dark:text-white text-xl font-mono font-bold focus:ring-primary focus:border-primary pl-10 pr-16 py-3 outline-none transition-all shadow-inner"
                     />
-                    <div className="absolute right-4 text-[10px] font-bold text-text-secondary dark:text-text-secondary-dark bg-gray-100 dark:bg-surface-dark px-2 py-1 rounded border border-border-light dark:border-border-dark uppercase">/ UNIT</div>
+                    <div className="absolute right-4 text-[10px] font-bold text-text-secondary dark:text-text-secondary-dark bg-gray-100 dark:bg-surface-dark px-2 py-1 rounded border border-border-light dark:border-border-dark uppercase">INR</div>
                   </div>
                   <p className="text-[11px] text-text-secondary dark:text-text-secondary-dark mt-2 italic">Set the fixed price per license for this partner</p>
                 </div>

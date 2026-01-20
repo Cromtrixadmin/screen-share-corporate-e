@@ -47,7 +47,7 @@ const AddResellerModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               <div className="relative flex items-center">
                 <span className="absolute left-4 text-text-secondary font-mono font-bold">₹</span>
                 <input className="w-full bg-white dark:bg-background-dark border border-slate-200 dark:border-border-dark rounded-lg text-charcoal dark:text-white text-base font-mono focus:ring-primary focus:border-primary placeholder:text-text-secondary/30 pl-8 pr-4 py-3 outline-none" placeholder="0.00" step="0.01" type="number"/>
-                <div className="absolute right-4 text-[10px] font-bold text-text-secondary bg-slate-100 dark:bg-surface-dark px-2 py-1 rounded border border-slate-200 dark:border-border-dark uppercase tracking-tight">INR / LIC</div>
+                <div className="absolute right-4 text-[10px] font-bold text-text-secondary bg-slate-100 dark:bg-surface-dark px-2 py-1 rounded border border-slate-200 dark:border-border-dark uppercase tracking-tight">INR</div>
               </div>
             </div>
           </div>
