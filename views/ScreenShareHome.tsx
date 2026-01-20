@@ -66,7 +66,7 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
             
             <div className="mb-6 flex-1 flex flex-col justify-start">
               <div className="w-full max-w-sm mx-auto">
-                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Your Address</label>
+                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold tracking-wider mb-2.5 ml-0.5">Your Address</label>
                 <div className="relative group/input mb-6">
                   <div className="flex items-center bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] rounded-xl h-11 px-4 transition-all duration-300 group-hover/input:border-primary-home/30">
                     <input className="bg-transparent border-none w-full text-slate-900 dark:text-white text-base font-bold tracking-[0.15em] font-mono focus:ring-0 cursor-default outline-none" readOnly type="text" value="455 901 228"/>
@@ -75,7 +75,7 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
                     </button>
                   </div>
                 </div>
-                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Security Code</label>
+                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold tracking-wider mb-2.5 ml-0.5">Security Code</label>
                 <div className="relative group/input mb-8">
                   <div className="flex items-center bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] rounded-xl h-11 px-4 transition-all duration-300 group-hover/input:border-primary-home/30">
                     <input className="bg-transparent border-none w-full text-slate-900 dark:text-white text-base font-bold tracking-[0.1em] font-mono focus:ring-0 cursor-default outline-none" readOnly type="text" value="x92mP5"/>
@@ -95,7 +95,7 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
             <div className="mt-auto pt-6 border-t border-slate-200 dark:border-[#2b3436] flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[16px]">lock</span>
-                <span className="text-slate-500 dark:text-[#a2b1b4] text-[11px] font-bold uppercase tracking-wide">End-To-End Encrypted</span>
+                <span className="text-slate-500 dark:text-[#a2b1b4] text-[11px] font-bold tracking-wide">End-To-End Encrypted</span>
               </div>
               <button className="text-primary-home hover:text-primary-home/80 text-xs font-bold flex items-center gap-1">
                 Unattended Access
@@ -116,14 +116,14 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
             
             <div className="mb-6 flex-1 flex flex-col justify-start">
               <div className="w-full max-w-sm mx-auto">
-                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Partner ID</label>
+                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold tracking-wider mb-2.5 ml-0.5">Partner ID</label>
                 <div className="relative mb-6">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[18px]">search</span>
                   </div>
                   <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-slate-900 dark:text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Partner ID" type="text" />
                 </div>
-                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold uppercase tracking-wider mb-2.5 ml-0.5">Passcode</label>
+                <label className="block text-slate-500 dark:text-[#a2b1b4] text-xs font-bold tracking-wider mb-2.5 ml-0.5">Passcode</label>
                 <div className="relative mb-8">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[18px]">lock</span>
@@ -141,7 +141,7 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
             </div>
             
             <div className="mt-auto pt-6 border-t border-slate-200 dark:border-[#2b3436] flex items-center justify-between opacity-60">
-              <span className="text-slate-500 dark:text-[#a2b1b4] text-[10px] font-bold uppercase tracking-widest">Version 4.2.0 Stable</span>
+              <span className="text-slate-500 dark:text-[#a2b1b4] text-[10px] font-bold tracking-widest">Version 4.2.0 Stable</span>
               <div className="flex gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
                 <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-[#2b3436]"></div>
