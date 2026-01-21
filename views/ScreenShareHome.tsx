@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ThemeToggle from '../components/ThemeToggle';
 
 interface ScreenShareHomeProps {
@@ -14,6 +14,8 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
   darkMode,
   toggleDarkMode 
 }) => {
+  const [showPasscode, setShowPasscode] = useState(false);
+
   return (
     <div className="h-full w-full flex flex-col overflow-hidden text-left">
       <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#2b3436] px-6 py-4 bg-white dark:bg-surface-home-dark/95 z-10 shrink-0 transition-colors">
@@ -128,7 +130,20 @@ const ScreenShareHome: React.FC<ScreenShareHomeProps> = ({
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <span className="material-symbols-outlined text-slate-400 dark:text-[#a2b1b4] text-[18px]">lock</span>
                   </div>
-                  <input className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-slate-900 dark:text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-4 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" placeholder="Enter Passcode" type="password"/>
+                  <input 
+                    className="w-full bg-slate-100 dark:bg-[#10171e] border border-slate-200 dark:border-[#2b3436] text-slate-900 dark:text-white text-base font-bold placeholder:text-slate-500 dark:placeholder:text-[#2b3436] rounded-xl h-11 pl-11 pr-11 focus:border-[#1a515b] focus:ring-1 focus:ring-[#1a515b]/20 transition-all shadow-inner font-mono tracking-[0.1em] outline-none" 
+                    placeholder="Enter Passcode" 
+                    type={showPasscode ? "text" : "password"}
+                  />
+                  <button 
+                    type="button"
+                    onClick={() => setShowPasscode(!showPasscode)}
+                    className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 dark:text-[#a2b1b4] hover:text-primary-home dark:hover:text-white transition-colors"
+                  >
+                    <span className="material-symbols-outlined text-[18px]">
+                      {showPasscode ? 'visibility_off' : 'visibility'}
+                    </span>
+                  </button>
                 </div>
                 <button 
                   onClick={onSelectRemote}
